@@ -434,22 +434,22 @@ void readFileToVector(ifstream &File, vector<GradEmploymentData> &v)
     cout << v[choice].educationMajor << endl;
     cout << "DemographicsTotal|Mean Salary|Median Salary" << endl;
     cout << "-------------------------------------------" << endl;
-    cout << v[choice].demographicsTotal << setw(24-to_string(v[choice].demographicsTotal).length())
-         << v[choice].meanSalary << setw(22-to_string(v[choice].meanSalary).length()) 
+    cout << setw(18) << left << v[choice].demographicsTotal << setw(12)
+         << v[choice].meanSalary 
          << v[choice].medianSalary << endl
          << "Asian  |Minority|White" << endl
          << "----------------------" << endl 
-         << v[choice].demographicsAsian << setw(14-to_string(v[choice].demographicsAsian).length()) 
-         << v[choice].demographicsMinority << setw(16-to_string(v[choice].demographicsMinority).length()) 
+         << setw(8) << v[choice].demographicsAsian << setw(9) 
+         << v[choice].demographicsMinority 
          << v[choice].demographicsWhite<< endl
          << "Females |Males" << endl
          << "--------------" << endl 
-         << v[choice].demographicsFemales << setw(15-to_string(v[choice].demographicsFemales).length()) 
+         << setw(9) << v[choice].demographicsFemales 
          << v[choice].demographicsMales<< endl
          << "Bachelor|Doctorate|Masters" << endl
          << "--------------------------" << endl
-         << v[choice].educationBachelor << setw(15-to_string(v[choice].educationBachelor).length()) 
-         << v[choice].educationDoctorate << setw(17-to_string(v[choice].educationDoctorate).length())
+         << setw(9) << v[choice].educationBachelor << setw(10) 
+         << v[choice].educationDoctorate
          << v[choice].educationMasters << endl;
     cout << "Press enter to continue...";
     cin.get();
